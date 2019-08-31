@@ -3,3 +3,4 @@ docs/*.synctex.gz
 docs/*.pdf
 docs/*.dvi
 docs/*.aux
+docs/*.toc
