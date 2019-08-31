@@ -1,0 +1,26 @@
+\section{Thorium Client Node Protocol -- TCNP}
+\subsection{Purpose}
+TNCP is a protocol that aims to allow anonymous and serverless client to client communication. It gets exponentialy more anonymous by the amount of clients use the network. All clients are a node in the network.
+This can be achieved by channeling the data through $ n $ amount of other nodes before getting to its target. Normaly the targets ip would need to be known for sending data to it, but this can be solved by having the target connected to $ n $ known nodes. The client can now send a request over the network to a known node and if the target is available a connection over the network will be established.
+\subsection{Operation}
+TNCP communication must take place over UDP/IP connections due to beeing able to accept connections without opening ports (UDP hole punching) and its performance advantage over TCP/IP.
+TNCP must implement a form of congestion control to prevent congestion of singel nodes or to avoid nodes with slow internet connectivity.
+\subsection{Packets}
+\begin{table}[h!]
+	\begin{center}
+		\caption{Structure of a packet}
+		\begin{tabular}{|c|c|c|c|}
+			\multicolumn{4}{c}{\textbf{32bit}} \\ 
+			\textbf{8bit} & \textbf{8bit} & \textbf{8bit} & \textbf{8bit} \\
+			\multicolumn{2}{|c|}{identifer} & \multicolumn{2}{c|}{identifer 2} \\
+			\hline
+			sequence & sequence 2 & \multicolumn{2}{c|}{length} \\
+			\hline
+			\multicolumn{4}{|c|}{crc32} \\
+			\hline
+			packet id & congestion & \multicolumn{2}{c|}{redundancy check} \\
+			\hline
+			\multicolumn{4}{|c|}{parity} \\
+		\end{tabular}
+	\end{center}
+\end{table}
