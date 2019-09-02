@@ -4,3 +4,4 @@ docs/*.pdf
 docs/*.dvi
 docs/*.aux
 docs/*.toc
+docs/*.out
