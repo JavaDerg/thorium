@@ -1,7 +1,2 @@
-docs/*.log
-docs/*.synctex.gz
-docs/*.pdf
-docs/*.dvi
-docs/*.aux
-docs/*.toc
-docs/*.out
+docs/*
+!docs/*.tex
