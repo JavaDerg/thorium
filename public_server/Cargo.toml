@@ -1,0 +1,8 @@
+[package]
+name = "public_server"
+version = "0.1.0"
+authors = ["Postrex <post-rex@pm.me>"]
+edition = "2018"
+
+[dependencies]
+netlib = { path = "../netlib" }

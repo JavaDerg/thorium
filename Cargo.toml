@@ -1,0 +1,6 @@
+[workspace]
+
+members = [
+    "netlib",
+    "public_server"
+]
