@@ -1,5 +1,3 @@
-use netlib::test;
-
 fn main() {
-    println!("Hello, world! {}", test());
+    println!("Hello, world!");
 }
