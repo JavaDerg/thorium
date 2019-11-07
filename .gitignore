@@ -1,2 +1,9 @@
+# Documentation
 docs/*
 !docs/*.tex
+
+# IDEs
+.idea/
+
+# Rust source
+target/
