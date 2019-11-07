@@ -7,3 +7,4 @@ docs/*
 
 # Rust source
 target/
+Cargo.lock
