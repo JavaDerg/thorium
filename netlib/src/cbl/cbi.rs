@@ -4,20 +4,20 @@ use std::ops::{Deref, DerefMut};
 use crate::util::get_time;
 
 pub struct ClientBufferItem {
-    pub ip: u128,
     pub id: u32,
     pub buffer: ClientBuffer,
     pub next: Option<ClientBufferItem>,
+    pub previous: Option<ClientBufferItem>,
     pub timeout: u128,
 }
 
 impl ClientBufferItem {
-    pub fn new(ip: u128, id: u32) -> ClientBufferItem {
+    pub fn new(id: u32) -> ClientBufferItem {
         ClientBufferItem {
-            ip,
             id,
             buffer: ClientBuffer::new(),
             next: None,
+            previous: None,
             timeout: get_time(),
         }
     }
